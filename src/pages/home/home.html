@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar  color="d">
+    <ion-title>
+     Employee Details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div align = "center">
+
+<ion-item class ="background1">
+  <ion-label>Employee Id</ion-label>
+  <ion-input type="text" [(ngModel)]="Id"></ion-input><br><br>
+  </ion-item>
+
+  <ion-item class ="background1">
+<ion-label>Employee Name</ion-label>
+   <ion-input type="text"[(ngModel)]="Name" > </ion-input><br><br>
+  </ion-item>
+
+  <ion-item class ="background1">
+    <ion-label>Surname</ion-label>
+   <ion-input type="text" [(ngModel)]="Surname"></ion-input><br><br>
+  </ion-item>
+
+  <ion-item class ="background1">
+    <ion-label >Employee role</ion-label>
+   <ion-input type="text" [(ngModel)]="Role"></ion-input><br><br>
+  </ion-item>
+
+  </div>
+
+
+
+<button ion-button class="button" (click)="methordAdd()" style="width:49%"> add Employee  </button>
+
+
+
+<ul >
+  <li *ngFor="let i of arrEmp ; let a =index">
+    {{ i.Id }} {{i.Name}} {{i.Surname}} {{i.Role}}
+    <button ion-button (click)="methordDelete(a)"> Delete Employee </button>
+    <button ion-button  (click)="MethodEdit(i)">Update</button>
+  </li>
+
+ 
+</ul>
+
+
+
+
+</ion-content>
